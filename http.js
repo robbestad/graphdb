@@ -2,7 +2,7 @@ const path = require('path');
 const http = require('http');
 const fs = require('fs');
 
-const port = process.env.OPENSHIFT_NODEJS_PORT || process.env.VCAP_APP_PORT || process.env.PORT || process.argv[2] || 8090;
+const port = process.env.OPENSHIFT_NODEJS_PORT || process.env.VCAP_APP_PORT || process.env.PORT || process.argv[2] || 3666;
 const ip = process.env.HOST || '127.0.0.1';
 
 const Gun = require('./lib/server');
