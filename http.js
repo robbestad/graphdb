@@ -6,12 +6,12 @@ const port = process.env.OPENSHIFT_NODEJS_PORT || process.env.VCAP_APP_PORT || p
 const ip = process.env.HOST || '127.0.0.1';
 
 const Gun = require('./lib/server');
+
 const gun = Gun({
-  file: 'data.json',
   s3: {
-    key: '', // AWS Access Key
-    secret: '', // AWS Secret Token
-    bucket: '' // The bucket you want to save into
+    key: 'AKIAJXIBHCN7MYWEEWEQ', // AWS Access Key
+    secret: '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', // AWS Secret Token
+    bucket: 'gun-db-robbestad' // The bucket you want to save into
   }
 });
 
