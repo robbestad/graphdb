@@ -4,8 +4,14 @@
   "version": "0.1.5",
   "homepage": "http://gunDB.io",
   "authors": [
-    { "name": "Mark Nadal",     "email": "mark@accelsor.com"    },
-    { "name": "Alex LaFroscia", "email": "alex@lafroscia.com"   }
+    {
+      "name": "Mark Nadal",
+      "email": "mark@accelsor.com"
+    },
+    {
+      "name": "Alex LaFroscia",
+      "email": "alex@lafroscia.com"
+    }
   ],
   "repository": {
     "type": "git",
