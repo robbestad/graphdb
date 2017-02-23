@@ -1,19 +1,14 @@
 const path = require('path');
 const http = require('http');
 const fs = require('fs');
+const config = require('./config');
 
 const port = process.env.OPENSHIFT_NODEJS_PORT || process.env.VCAP_APP_PORT || process.env.PORT || process.argv[2] || 3666;
 const ip = process.env.HOST || '127.0.0.1';
 
 const Gun = require('./lib/server');
 
-const gun = Gun({
-  s3: {
-    key: 'AKIAJXIBHCN7MYWEEWEQ', // AWS Access Key
-    secret: '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', // AWS Secret Token
-    bucket: 'gun-db-robbestad' // The bucket you want to save into
-  }
-});
+const gun = Gun(config.s3);
 
 const server = http.createServer(function (req, res) {
   if (gun.wsp.server(req, res)) {
